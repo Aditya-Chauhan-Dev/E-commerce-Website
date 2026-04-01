@@ -1,0 +1,195 @@
+
+@import "tailwindcss";
+
+/* Themes */
+.light-theme{
+    background-color: #e6eaef;
+    color: #213c67;
+    padding-bottom: 2rem;
+}
+
+.dark-theme{
+    background-color: #090a0f;
+    color: #d1d5db;
+    /* background-image: url(./assets/Dark.png);
+    background-size: cover; */
+}
+/* ------------------NavBAr----------------------- */
+body.dark-theme .navbar{
+    background-color: #040405;
+}
+body.light-theme .navbar{
+    background-color: #1b2b44;
+    color: #fff;
+}
+/* --------------------Services------------------------ */
+body.light-theme .service p{
+    color: black;
+}
+body.dark-theme .contact input::placeholder, textarea::placeholder{
+    color: #868686;
+}
+
+body.light-theme .contact input::placeholder, textarea::placeholder{
+    color: #1b2b44;
+}
+
+body.light-theme .Serv-Card{
+    border: 2px solid #c8c9ca;
+    box-shadow: inset 0px 8px 30px #6b6b6b;
+    background: #c8c9ca;
+}
+body.light-theme .Serv-Card{
+    color: #010101;
+}
+/* -------------------------------------------------------------------------------------------------------- */
+
+
+/* Mobile Menu  */
+.menu-open{
+    display: none;
+}
+
+.menu-close{
+    display: none;
+}
+
+@media (max-width:768px){
+    .mobile-nav-btn{
+        display: inline-block;
+        z-index: 9999;
+    }
+    .menu-open{
+        display: inline-block;
+    }
+    .active .menu-open{
+        display: none;
+        font-size: 4.2rem;
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        z-index: 9999;
+    }
+
+    .active .menu-close{
+        display: inline-block;
+        color: #010101;
+    }
+
+    .nav-list{
+        color: #010101;
+        width: 100vw;
+        font-size: 1.5rem;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .active .nav-list{
+        visibility: visible;
+        opacity: 1;
+        z-index: 9999;
+    }
+
+
+}
+/* mobile respone */
+@media (max-width:932px) {
+    .highrate {
+        display: flex;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* -------------------Hero Section--------------- */
+
+body.dark-theme .HeroSection{
+    background-image: url(./assets/HeroSection.png);
+    background-size: cover;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+body.light-theme .HeroSection{
+    background-image: url(./assets/HeroSection2.png);
+    background-size: cover;
+    height: 450px;
+}
+
+@media (max-width:932px){
+    .HeroSection{
+        background-image: url(./assets/HeroSection.png);
+        background-size: cover;
+    }
+}
+
+
+/* --------------------Home------------------------ */
+body.light-theme .home {
+    padding: 0;
+}
+/* --------------------High Rate products------------- */
+.title-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   /* light gray text */
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.title-line::before,
+.title-line::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #6b7280);
+}
+
+.title-line::after {
+  background: linear-gradient(to left, transparent, #6b7280);
+  width: 200px;
+}
+
+.title-line span {
+    padding: 0 15px;
+}
+
+
+
+
+/* -------------------Contact----------------------------- */
+@media (max-width:932px){
+    .contact{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact iframe{
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+
+/* ----------------------Product Crad----------------------------- */
+body.light-theme .product{
+    border: none;
+    box-shadow: inset 0px 8px 30px #c8c9ca;
+}
+
+/* -----------------------About------------------------------------ */
+body.light-theme .about-us{
+    background-color: #1a3d74;
+}
