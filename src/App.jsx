@@ -8,7 +8,7 @@ import Cart from './pages/Cart'
 import Error from './pages/Error'
 import { ThemeProvider } from './theme/theme'
 import Navbar from './component/navbar/Navbar'
-import SingleProduct from './pages/SingleProduct'
+import SingleProduct from './component/singleProduct/SingleProduct'
 
 function App() {
   return (
