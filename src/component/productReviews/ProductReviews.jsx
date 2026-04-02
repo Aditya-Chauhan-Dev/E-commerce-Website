@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaRegUserCircle } from "react-icons/fa";
+import ReviewStars from '../startRating/ReviewStars';
 
 function ProductReviews({reviews=[]}) {
-    console.log(reviews);
     
     
     
@@ -15,7 +15,7 @@ function ProductReviews({reviews=[]}) {
                     <p className='text-xl font-semibold underline'>{reviews.reviewerName}</p>
                 </div>
                 <p className='text-sm'>{reviews.comment}</p>
-                <p>{reviews.rating}</p>
+                <div className='text-xs'><ReviewStars rating={reviews.rating} /></div>
             </div>
         })}
     </div>

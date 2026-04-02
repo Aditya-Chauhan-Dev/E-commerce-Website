@@ -193,3 +193,8 @@ body.light-theme .product{
 body.light-theme .about-us{
     background-color: #1a3d74;
 }
+
+/* -----------------------Cart Button---------------------------------- */
+body.light-theme .CartBtn{
+    background: #213e6b;
+}

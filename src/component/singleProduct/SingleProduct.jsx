@@ -5,13 +5,15 @@ import Navigator from '../navigationPage/Navigator';
 import FormatPrice from '../../Helper/FormatPrice';
 import ProductImage from '../productImages/ProductImage';
 import ProductReviews from '../ProductReviews/ProductReviews';
+import ReviewStars from '../startRating/ReviewStars';
+import AddToCartBtn from '../addToCartBtn/AddToCartBtn';
 
 function SingleProduct() {
     const {getsingleProduct,isSingleLoading,oneProduct}=Globalcontext();
     // const API="https://fakestoreapi.com/products"
     const API="https://dummyjson.com/products"
     const {id}=useParams();
-    const {id:index,title,description,category,images=[],tags=[],rating,price,brand,warrantyInformation,shippingInformation,availabilityStatus,reviews=[],returnPolicy,discountPercentage}=oneProduct
+    const {id:index,title,description,category,images=[],tags=[],rating,price,brand,warrantyInformation,shippingInformation,availabilityStatus,reviews=[],returnPolicy,discountPercentage,stock}=oneProduct
     const discount=discountPercentage/100
 
     
@@ -27,6 +29,7 @@ function SingleProduct() {
   return (
     <div className='px-5 lg:px-10 items-center'>
       <Navigator title={title} />
+
       {/* Product Info */}
       <div className='lg:grid lg:grid-cols-2 flex flex-col items-center gap-5'>
 
@@ -37,7 +40,7 @@ function SingleProduct() {
           <div className='text-sm'>
             <h3 className='text-4xl font-semibold'>{title}</h3>
             <p>Brand: {brand}</p>
-            <p>{rating}</p>
+            <ReviewStars rating={rating} />
           </div>
 
           <div className='text-xl'>
@@ -49,6 +52,9 @@ function SingleProduct() {
               <FormatPrice price={price*(1+discount)} />
             </div>
           </div>
+
+          {/* Add To Cart Btn */}
+          <AddToCartBtn stock={stock} />
 
           <p className='text-sm'>{description}</p>
 

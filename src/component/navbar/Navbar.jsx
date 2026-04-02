@@ -29,6 +29,7 @@ function Navbar() {;
                 <li>
                     <Link
                     to='/about'
+                    onClick={()=>setMenu(false)}
                     className='hover:text-[#C2B067]'>About</Link></li>
                 <li>
                     <Link
