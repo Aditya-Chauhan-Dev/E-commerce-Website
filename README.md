@@ -26,9 +26,6 @@ A modern and responsive E-Commerce web application built using **React.js**. Thi
 * **API:** External Product API
 * **Routing:** React Router
 
----
-
-##
 
 ---
 
