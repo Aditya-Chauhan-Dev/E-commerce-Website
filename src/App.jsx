@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import { HashRouter,Routes,Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Products from './pages/Products'
@@ -13,7 +13,7 @@ import SingleProduct from './component/singleProduct/SingleProduct'
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <HashRouter>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -24,7 +24,7 @@ function App() {
         <Route path='/product/:id' element={<SingleProduct />} />
         <Route path='*' element={<Error />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </ThemeProvider>
   )
 }
