@@ -10,7 +10,6 @@ import AddToCartBtn from '../addToCartBtn/AddToCartBtn';
 
 function SingleProduct() {
     const {getsingleProduct,isSingleLoading,oneProduct}=Globalcontext();
-    // const API="https://fakestoreapi.com/products"
     const API="https://dummyjson.com/products"
     const {id}=useParams();
     const {id:index,title,description,category,images=[],tags=[],rating,price,brand,warrantyInformation,shippingInformation,availabilityStatus,reviews=[],returnPolicy,discountPercentage,stock}=oneProduct
@@ -54,7 +53,7 @@ function SingleProduct() {
           </div>
 
           {/* Add To Cart Btn */}
-          <AddToCartBtn stock={stock} />
+          <AddToCartBtn stock={stock} oneProduct={oneProduct} />
 
           <p className='text-sm'>{description}</p>
 
