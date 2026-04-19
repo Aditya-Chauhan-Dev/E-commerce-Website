@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Hero from '../../../assets/Hero.png'
 
 
 function HeroSection({data}) {

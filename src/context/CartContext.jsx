@@ -15,7 +15,7 @@ const cartReducer = (state, action) => {
       );
 
       if (existing) {
-        // ✅ quantity increase karo
+        //  quantity increase karo
         const updatedCart = state.cart.map((item) =>
           item.id === action.payload.id
             ? { ...item, quantity: item.quantity + action.payload.quantity }
